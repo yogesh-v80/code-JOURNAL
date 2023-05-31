@@ -1,0 +1,32 @@
+Course Objective.. of ReactJS advance
+
+
+
+render list in react
+
+map() method 
+
+keys
+
+controlled components ( in forms )
+
+props and state
+
+context API
+
+Hooks (in depth) - use and purpose, custom hooks,
+
+useState, useEffect, useReduce
+
+Advanced JSX concepts
+
+children types in JSX 
+
+Higher - order component 
+
+render props
+
+testing and debuging  - practical application 
+
+Lab project (portfolio app )
+

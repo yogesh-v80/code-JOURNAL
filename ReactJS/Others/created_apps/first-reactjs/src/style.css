@@ -1,0 +1,87 @@
+body{
+	margin: 0;
+	font-family: 'Inter', sans-serif;
+	background-color: #282D35;
+	/* height: 100vh; */
+}
+
+*{
+	box-sizing: border-box;
+}
+
+nav{
+     display: flex;
+     align-items: center;
+     background-color: #21222A;
+     height: 90px;
+	padding: 30px 25px;
+}
+
+.nav--icon{
+	height: 30px;
+	margin-right: 7px;
+}
+
+.nav--title{
+	color: #DEEBF8;
+	font-weight: 600;
+	/* font-size: 20px; */
+	/* margin: 0; */
+}
+
+
+.nav--logo_text{
+	margin-right: auto;
+	color: #61DAFB;
+	font-weight: 700;
+	font-size: 22px;
+}
+
+.main--title{
+	margin: 0;
+	font-size: 39px;
+	letter-spacing: -0.05em;
+}
+
+main{
+/* text-align: left; */
+padding: 57px 45px;
+color: white;
+
+	background-image: url('./images/logo512.png');
+	background-repeat: no-repeat;
+	background-size: 150px;
+	background-position-x: right;
+	background-position-y: center;
+
+
+}
+
+.main--facts{
+	margin-top: 40px;
+	max-width: 400px;
+}
+
+.main--facts > li{
+	line-height: 22px;
+	padding-block: 10px;
+
+}
+
+/*  ::marker is pseudo element  */
+/* it let us to style the bullets of list */
+.main--facts > li::marker{
+	color: #61DAFB;
+	font-size: 1.4rem;
+
+}
+
+
+/* @keyframes nav--icon {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+} */

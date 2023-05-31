@@ -1,0 +1,224 @@
+Basic types of navigations
+
+standard of design
+
+how navigation process works in react
+
+what is accepted modern website navigation and how does it work in react.
+
+horzontal nav bar ( navbar)  ( used for big screens )
+
+vertical nav bar ( sidebar)
+
+menu hiding behind icon (burger icon or burger menu.. three lines)
+burger menu used for small screen size (mobiles )
+
+
+drop down menu or mega menu
+
+footer navigation menu  (displayed as several visual columns containting 
+links)
+
+
+
+
+
+Before Single-Page Appslication (traditional web pages)
+
+Before the advent of modern JavaScript frameworks, most websites were 
+implemented as multi-page applications. That is, when a user clicks on a 
+link, the browser navigates to a new webpage, sends a request to the web 
+server; this then responds with the full webpage and the new page is 
+displayed in the browser.
+
+This can make your application resource intensive to the Web Server. CPU 
+time is spent rendering dynamic pages and network bandwidth is used sending 
+entire webpages back for every request. If your website is complex, it may 
+appear slow to your users, even slower if they have a slow or limited 
+internet connection.
+
+To solve this problem, many web developers develop their web applications as 
+Single Page Applications.
+
+
+
+Single-Page Apps ( SPA )
+
+You’re using many Single Page Applications every day. Think of your favorite 
+social network, or online email provider, or the map application you use to 
+find local businesses. Their excellent user experiences are driven by Single 
+Page Applications.
+
+A Single Page Application allows the user to interact with the website 
+without downloading entire new webpages. Instead, it rewrites (with the use 
+of JSON ) the current webpage as the user interacts with it. The outcome is 
+that the application will feel faster and more responsive to the user.
+there virtual dom is updated ( with new variable which we get by JSON ) and 
+then updates in virtual DOM reflected in React DOM.
+
+## React can't imitate multipage website. Or it can't use anchor tag. Or it
+can't work in traditinal web page way where whole page needs to loaded.
+
+
+
+
+React router library use for multipage navigation in react.
+
+import {BrowserRouter }
+
+to install react router ( note: install in the same folder where you
+ working with react files )
+ 
+ npm i react-router-dom@6
+ 
+ 
+if we do   ->   npm i react-router  
+(it will work for both react-router-dom and react-router-native )
+
+
+import {Routes, Route, Link} from 'react-router-dom';
+
+function App() {
+  return (
+    <div> 
+	  <nav>
+      <Link to="/" className="nav-item">Homepage</Link>
+        <Link to="/about" className="nav-item">About Little Lemon</Link>
+        <Link to="/contact" className="nav-item">Contact</Link>
+	  </nav>
+      <Routes> 
+        <Route path="/" element={<Homepage />}></Route>
+        <Route path="/about" element={<AboutLittleLemon />}></Route>
+        <Route path="/contact" element={<Contact />}> </Route>
+      </Routes>
+    </div>
+  );
+};
+
+
+
+
+ASSETS and best practice to store them
+
+Assets in react can be -> Images, Fonts, Stylsheets, any files needed by
+your app at run time.
+
+we make Assets folder and put into the src folder
+
+we can put Assests folder in public folder also only when our app don't use 
+those files that resides in assets folder.
+
+
+
+
+HOW to import and work with assets in react apps
+
+
+there is three way to add images from assets folder
+
+1. import
+
+import cat from './assets/images/cat.jpg'
+
+we giving name to the asset 'cat'   for the cat.jgp image
+
+<img src = {cat} alt = "a picture of cat" >
+
+
+2. require keyword (import is not required )
+
+
+<img src = {require('./assets/images/cat.jpg')}
+
+for this import statement is not required because we using the requier() 
+syntax inside the jsx expression that assigned to src jsx attribute.
+
+
+
+3. remote link
+
+const randomImage = "url of image here"
+
+<img src = {randomImage} alt = "description of image" >
+
+
+webpack -
+
+webpack is a modular bundler because it takes various type of files and it
+will bundle them together so that a browser can understand that bundle and 
+work with it.
+
+
+
+how to use audio and video assets within an app 
+
+1.video element-> <video src={vidurl} width={200} height={150} controls />
+note: it may not work with some social sites video.
+
+2.Embedded third-party videos-> add a separate component for video and 
+access by their id name  (puz)
+
+3.Third party npm package to streamline the process of adding videos to 
+your app
+
+https://www.npmjs.com/package/react-player    (it is good and maintained)
+
+
+
+
+how to find suitable react packages to use when working with audio and 
+video file.
+
+frequently maintained or updated
+gihub pages checks
+search on internet of package name.
+
+e.g-  https://www.npmjs.com/package/react-player 
+
+
+
+
+
+
+
+
+
+
+CONDITIONAL RENDERING  (with use of ternary or if else )
+
+Have you ever visited a website that required a user account? To log in you 
+click on a Log in button and once you’ve logged in, the Log in button 
+changes to a Log out button.
+
+This is often done using something called conditional rendering.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

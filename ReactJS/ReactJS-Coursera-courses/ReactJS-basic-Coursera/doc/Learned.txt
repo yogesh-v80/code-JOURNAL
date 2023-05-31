@@ -1,0 +1,114 @@
+what i Learned - 
+
+what is react and use in real world
+
+component architecture, jsx, folder structure, how to import
+
+style with jsx
+
+embed js expression in attributes of jsx
+
+event handling in react
+
+data flow in parent and child component
+
+state
+
+stateful and stateless
+
+hooks
+
+useState(), useRef(), useContext(), createContext()
+
+props
+
+prop Drilling
+
+parent children data flow in one direction for easy logic
+
+children attribute of jsx element.
+
+List and key (  map(), and filter() )
+
+<Fragment> </Fragment> (use if we have to pass key )  
+or use shorthand version of Fragment  < > ... </>
+
+
+lifting up state
+
+Controlled and uncontrolled components 
+
+use of Context Api  to manage react states   ( little bit understand )
+
+useReducer ( haven't learned )
+
+navigation types
+
+single page application (SAP) ... a little bit more to read
+
+create navigation routes
+
+router library install, import {Routers, Route, Link } and use of them.
+
+conditonal rendering 
+
+assets folder in src to store images, stylesheet, and other files.
+
+three ways of importing image in react
+
+adding video and audio files via npm package
+
+
+
+
+
+
+
+
+
+
+
+
+
+REACT RECONCILIATION ALGORITHM
+Reconciliation is the process by which React updates the UI 
+to reflect changes in the component state.
+ The reconciliation algorithm is the set of rules that React uses 
+ to determine how to update the UI in the most efficient way possible.
+
+
+
+React uses a virtual DOM (Document Object Model) to update the UI. The virtual DOM is a 
+lightweight in-memory representation of the real DOM, which allows React to make changes to 
+the UI without manipulating the actual DOM. 
+This makes updates faster, as changing the virtual DOM is
+ less expensive than changing the real DOM.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

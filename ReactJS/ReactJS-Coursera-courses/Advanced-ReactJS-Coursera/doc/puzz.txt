@@ -1,0 +1,21 @@
+integration testing vs unit testing 
+
+end to end test ( whole dom tree testing )
+
+js and react testing is two different testing.
+
+regression testing.
+
+Definition: Regression testing refers to a type of software testing 
+that is used to verify any modification or update in a software without 
+affecting the overall working functionality of the said software.
+
+
+continuous iteration ( CI ) on github.
+
+
+
+
+
+
+

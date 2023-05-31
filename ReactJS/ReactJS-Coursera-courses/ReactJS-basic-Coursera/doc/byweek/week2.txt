@@ -1,0 +1,382 @@
+
+###
+
+Handling Events 
+
+Supported Events 
+
+SyntheticEvent 
+
+
+
+####
+
+ Props drilling simply means passing a prop through 
+ props objects through several layers of components.
+
+
+####### 
+
+use of ES5 and ES6 function 
+
+# Ternary operators
+
+  <h1>{Math.random() >= 0.5 ? "Over 0.5" : "Under 0.5"}</h1>
+ 
+ comparison (boolean Value) ? true : false
+ 
+ 
+function Example3() {
+
+    const getRandomNum = () => Math.floor(Math.random() * 10) + 1 ;
+
+    return (
+        <div className="heading">
+            <h1>Here's a random number from 0 to 10: { getRandomNum }</h1>
+        </div>
+    );
+};
+
+
+
+#####
+
+you can pass almost any kind of expression as a prop.
+
+
+- Booleans, Null, and Undefined Are Ignored
+- false, null, undefined, and true are valid children.
+ They simply don’t render. 
+ 
+-Below JSX expressions will all render to the same thing:
+
+<div />
+
+<div></div>
+
+<div>{false}</div>
+
+<div>{null}</div>
+
+<div>{undefined}</div>
+
+<div>{true}</div>
+
+
+
+
+########## Hooks   in reactjs
+
+- it is a function 
+
+- You can only call hooks at the top level of your component or your own hooks. 
+
+- You cannot call hooks inside loops or conditions. 
+
+- You can only call hooks from React functions, and not regular JavaScript functions.
+
+- hooks don't work in javascript it is built-in react function i.e. it won't
+  work directly with javascript. And it must be called at top level of component.
+
+- introduced version 16.8 of reactjs
+
+- Hooks used in functional component 
+
+- Hooks is used to reduce the unecessary code reuse across the component.
+
+- function let you hook into react state and lifecycle features of components.
+
+import React, {useState} from 'react';
+
+const [showMenu, setShowMenu] = useState(false);
+
+- there showMenu (state variable) is variable which gonna have intitial value false
+  and setShowMenu (state function) is a function which we can use to set 
+  the value or change the state of shoeMenu.
+
+if we do setShowMenu(true) it will update the showMenu value to true
+
+the useState hooks (and other hooks ) can only be called at 
+the top-level of our component or functional component
+
+the hook functions can have numbers, string, object, boolean, arrays
+as a default value
+
+we can also build our own hooks, which lets you extract custom component 
+logic into reusable function.
+
+hooks provide readabilty and simpilicity to the code.
+
+
+i got to know about - useState(), useRef()
+
+
+
+
+######### State
+
+Data in a component that determines behavior
+
+developer use it where the data is likly to change
+
+state data is internal to component itself this allow component to rerender
+based on the change in state data or state variable value.
+
+state is kept in state variable
+
+
+stateless -  no state is defined
+
+statefull - state is defined
+
+useState hook - enable use of components for controlling state
+to access (to update) the state object we use useState hook
+
+if we state's variable name is Greet then destructured state function 
+should be setGreet
+
+
+
+
+## mangaging state
+
+lifting state up ?
+
+When you want to coordinate two components, move their state to their 
+common parent.
+
+Then pass the information down through props from their common parent.
+
+Finally, pass the event handlers down so that the children can change the 
+parent’s state.
+
+It’s useful to consider components as 
+“controlled” (driven by props) or 
+“uncontrolled” (driven by state).
+
+
+Sometimes, you want the state of two components to always change together. 
+To do it, remove state from both of them, move it to their closest common 
+parent, and then pass it down to them via props. This is known as lifting 
+state up, and it’s one of the most common things you will do writing React 
+code.
+
+Controlled and uncontrolled components 
+
+When writing a component, consider which information in it should be 
+controlled (via props), and which information should be uncontrolled (via 
+state). But you can always change your mind and refactor later.
+
+
+
+API - it is provide predefined set of way you can interact with some code.
+      e.g -  maps api, social feed api, 
+      
+
+Context API - provide a streamlined way to work with context in react.
+
+context provider,   context consumer   ( two components )
+
+use of context api to manage the state. 
+
+useContext()
+
+createContext()
+
+
+
+useReducer()    -  it's super power to use state.
+
+return new Error();
+
+
+
+
+
+
+
+
+
+######### other important get to know about during course ##
+
+target vs currentTarget
+in reat we use  myRef.current   to access the element of DOM or 
+more specifically the virtual DOM
+
+The target property returns the element where the event occured.
+
+The target property is read-only.
+
+The target property returns the element on which the event occurred, 
+opposed to the 
+
+currentTarget property, which returns the element whose event listener 
+triggered the event.
+
+
+
+
+onChange={e => { 
+            setForm({ 
+              ...form, 
+              firstName: e.target.value 
+            });
+
+
+
+const inputEl = useRef(null);
+  const onButtonClick = () => {
+    // `current` points to the mounted text INPUT ELEMENT
+    inputEl.current.focus();
+  };
+  
+  
+  setInterval(() => {
+      setNow(Date.now());
+    }, 10);
+    
+    
+    
+  clearInterval(intervalRef.current);
+  
+  
+  
+  
+  
+
+
+
+
+Here, we get a list of <p> elements whose immediate parent element is a <div> with 
+the class highlighted and which are located inside a container whose ID is test.
+
+const container = document.querySelector("#test");
+const matches = container.querySelectorAll("div.highlighted > p");
+
+  
+  
+  
+  
+  
+  toFixed() 
+  converts a number to a string, rounded to a specified number of decimals:
+  
+  let num = 3.14159265359;
+let formattedNum = num.toFixed(2);
+console.log(formattedNum); // output: "3.14"
+  
+ 
+ 
+toString()     // to convert in string.
+
+
+In summary, toFixed() is used to format a number with a 
+specified number of digits after the decimal point, 
+while toString() is used to convert a number to a string 
+without any formatting.
+
+let num = 42;
+let stringNum = num.toString();
+console.log(stringNum); // output: "42"
+
+
+
+
+
+importance of key when rendering the list
+
+Keys tell React which array item each component corresponds to, so that it 
+can match them up later. 
+
+This becomes important if your array items can 
+move (e.g. due to sorting), get inserted, or get deleted. A well-chosen key 
+helps React infer what exactly has happened, and make the correct updates 
+to the DOM tree.
+
+Rather than generating keys on the fly, you should include them in your 
+data:
+  
+Why does React need keys? 
+Imagine that files on your desktop didn’t have names. Instead, you’d refer 
+to them by their order — the first file, the second file, and so on. You 
+could get used to it, but once you delete a file, it would get confusing. 
+The second file would become the first file, the third file would be the 
+second file, and so on.
+File names in a folder and JSX keys in an array serve a similar purpose. 
+They let us uniquely identify an item between its siblings. A well-chosen 
+key provides more information than the position within the array. Even if 
+the position changes due to reordering, the key lets React identify the 
+item throughout its lifetime. 
+  
+  
+  
+Crypto.randomUUID()
+  
+  
+  
+Browsers use many tree structures to model UI. The DOM represents HTML 
+elements, the CSSOM does the same for CSS. There’s even an Accessibility 
+tree!
+
+(search cssom code example on chatGPT)
+  
+  
+React preserves a component’s state for as long as it’s being rendered at 
+its position in the UI tree. If it gets removed, or a different component 
+gets rendered at the same position, React discards its state.
+  
+  
+  
+onChange={handleChange}
+
+If you pass value without onChange, it will be impossible to type into the 
+<input />
+
+
+If you render a checkbox with checked but no onChange, you will see an 
+error in the console. 
+You need to read e.target.checked rather than e.target.value for 
+checkboxes.
+
+
+
+The Number() method converts a value to a number. 
+(if it is convertible) 
+If the value cannot be converted, NaN is returned.
+If no value is provided, 0 is returned.
+
+Number(true);         // 1
+Number(false);        // 0
+Number(new Date());   // 1677275927315
+Number(Date());       // NaN
+  
+  
+
+
+Lifecycle of Components
+
+Each component in React has a lifecycle which you can monitor 
+and manipulate during its three main phases.
+
+The three phases are: Mounting, Updating, and Unmounting.
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,300 @@
+
+easier to build on.
+
+meta create it for modern looks of facebook. and also for easier development.
+
+fast and responsive UI
+
+open-source - anyone can contribute ... community around React.
+
+
+
+
+component -
+
+React work on component architecture. rather inheritence.
+component is one of the foundaton of React. 
+It gives the composibilty feature to the React.
+everything revolve around the component.
+It is the way of composing the layout and we can 
+also import the layout with other components.
+we can pass data one component to another component.
+component can be functional. class component.
+provides reusabilty of code.
+it can be use multiple times and easily inserted when needed.
+a whole website made by these component. website is a complex thing
+so we work on different parts of website and every part further divided in
+components.
+
+component is sefl-contained that means they have their own --
+HTML, CSS, javascript logic for functionality.
+
+
+
+why react ?
+
+used everywhere in the tech world.
+
+valueable skill set to have.
+
+easy to pick up and learn. the strong and big community,
+a good documentation.
+
+react provide flexibility.
+
+we can create custom UI.
+
+react provide the flexibiliy to integrate with third party libraries like redux and other libraries.
+
+react is just front-end library or client-side library. it's not a full fledge framwork like angular.
+
+React is great for complex UI and we can reuse code across the differenct pages. so it's provide the code reusabilty feature.
+like Meta can use react component across the different platform like facebook, instagram and whatsapp.
+
+we fix bug once and solving the problem everywhere.
+
+angular is full-fledged framwork to build apps or website.
+in angular we don't have to integrate third party libraries and 
+don't need to figure out the routing and server client communicaton
+SAP creation is more easier but react provide the flexibilty to create 
+more complex UIs
+
+
+
+
+
+SAP ?
+
+Single Page Applicaton.
+
+in this the page don't need to reload everytime whenever we navigate through
+the page. it is efficient. no frequent reload required. it is interactive or 
+content of the web pages changes based on the user interaction.
+
+in SPA when we search on page the URL don't change.
+
+
+
+React feature -
+
+build and compose components.
+
+high performance rendering ( virtual DOM )
+
+component rendering.
+
+DOM is logical tree-like structure representing the HTML document. and it
+used nodes to represent varous part of the document.
+
+react reduces the normal complex DOM manipulation in javascript. it don't directly manupulate DOM. it used virtual DOM.
+
+virtual DOM is in-memory representation or clone of the real DOM. 
+it minimizes updates to the DOM itself.
+react uses the virtual DOM to update real DOM only when needed.
+this ensures that the update is as minimal as possible, increasing 
+application speed and performance.
+
+
+
+
+COMPONENTS,  JSX,    TRANSPILER
+
+Component ultimately converted to the DOM fragment and placed into
+the existing DOM as a child of the HTML div element with an ID of roots.
+this div element is then rendered to the browser.
+
+Component names must be capitalized. because react treat lowercase
+components as regular HTML. Capitalization help to distinguish between 
+JSX and HTML elements.
+function name must also be capitalized inside the component.
+
+JSX allow us to write the javascript code inside what looks like HTML element. Combination of custom HTML and javascript. it makes website dynamic.
+
+Transpiler name is  -  
+Babel .. convert the JSX into javascript and ES6 code into older version
+of javascript for the browser who doesn't have support for newer ES6 code.
+
+
+Organization of component - is important to access the component easier.
+
+The React project structure 
+( default files and folder structure of react )
+node module,
+public,
+src (source)
+root files.
+
+
+node module folder -  
+it is repository for all the requred modules for react app.
+
+developers use packages when they want to add a piece of functionality
+that someone else coded and made available to other develepors via npm
+ecosytem. npm is a package manager.
+
+public includes the assets which will be displayed. 
+robots.txt file used for the SEO (search engine optimization).
+manifest.json provides meta data.
+
+the react app get injected into specific HTML element inside the body 
+of index.html file.
+
+
+src -
+this contains all the essential compnents files to ensure the react app is
+working.
+
+the test files for the app's performance and testing.
+
+index.js is important file where we import all the components.
+render to the root element.
+
+Root files -
+two jason file,
+README.md file,
+.gitignore file.
+
+the .gitignore files is version control and it's specify which files and 
+folder must be excluded from the project.
+
+README.md is a markdown ( .md ) files. Have the basic information about the 
+project.
+
+The package.json file list the information pertaining to my app, which 
+allow npm to run several scripts and perform various task in the app itself.
+it helps rebuild the app on another machine.
+
+The pakage-loc.json file holds the list of all dependencies with a 
+specific versions.
+if we delete the node moudules folder with all the files that our project 
+nedds to run, the package-loc.json file has all the informaton for npm to 
+be able to rebuild those files reliably.
+
+these json files ensure the npm tracks all the modules installation 
+properly.
+
+
+date - 22 jan 2023
+
+how to locate and integrate those components?
+
+Modules - standalone unit (we can add them to your program, remove, 
+replace them with other modules) of code which we can use again and again.
+
+export - standalone unit of code which we can use re-use again and again.
+it makes the function and variable available to other files. (by use of
+import statement where we wanto to include it )
+
+it helps to think every JS files as a modules.
+
+Exports -   
+Default export    -  function name and file name is same 
+
+Named export.     - function name and file name isn't same
+
+
+modules vs components
+
+since both essentially just js files
+
+components - is a single part or small piece of functionality (like button)
+
+module - larger than just one componnent. it's like a series of components.
+
+this technique of spliting code into several modules is known as moduler programming, 
+and it compliments the component-based architecture or React.
+
+in react we includes the components using the import statements.
+
+./  is requred before the component file extention and file extention is 
+excluded.
+
+In React we manages components files using component folder.
+
+
+(props --- properties )
+props -  it is an JS object which use pass data from one to another component.
+
+props are passed using JSX syntax.
+
+props can accept many data types ranging form string, integer and more complex types such as function, array, and objects.
+
+the flow of data become dynamic with the use of props
+
+props object enclosed in curly braces {}.
+
+props are immutable. (cannot be changed)
+
+parent component - component sending the props data 
+child component - who recieves the props data.
+
+
+
+parent component can have multiple childs.
+it is one directional flow of data i.e. it is not possible to communicate
+or send data from chid to parent component using props (there is other
+approah for that) .
+
+another limitation of props is that it is a pure function.
+when declaring a component using props or function using props , it must never modify its own props.
+
+
+pure function- is a function that will always return the same outputs for 
+the same argument values that are passed in.
+
+
+why is one-way flow in React important?
+
+one-way flow means - top to bottom (parent to child) data flow via props 
+
+
+props data    and    state data    in react
+
+
+props data -  data comes from outside and can't be mutate by reciever (child or component ). there data belongs to the parent.
+
+state data -  is data inside the components that it controls and can
+mutate. there data belongs to the component itself.
+
+
+// to print local time.
+const date = new Date();
+	return ( 
+			<div>
+				<Child  message={date.toLocaleTimeString()} />
+			</div>
+		)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

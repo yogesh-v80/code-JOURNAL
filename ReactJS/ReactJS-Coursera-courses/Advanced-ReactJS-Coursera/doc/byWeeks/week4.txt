@@ -1,0 +1,24 @@
+the final project portfolio website wasn't working in react.
+
+
+so first i downloaded src folder. And installed all
+dependencies like chakra ui, yup ...etc.
+but still didn't worked.
+ error occurs - deprecated, module export problem like that.
+not sure still whats gone wrong.
+
+
+then i downloaded whole reactlab forlder and used the command
+npm start but it didn't worked out.
+so i used the commnad npm install and then used the command
+npm start and it got started. 
+
+matha kharab ho gaya tha yahan.
+
+
+
+
+so now i have to start builing the project.
+
+
+

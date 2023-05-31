@@ -1,0 +1,68 @@
+use of <a> tag in react for external link only. not for internal link
+
+
+a module is nothing but a javascript file which we can import to other modules
+
+
+Customizing the project
+
+Building a Layout
+
+Main navigation 
+
+Promo (main advertisement)
+
+A list of newest posts' previews (intros)
+
+The footer 
+
+
+Organizing Your Code
+
+Grouping by features 
+
+Grouping by file type 
+
+
+
+
+a nested JSX structure is just a bunch of nested React.createElement calls, 
+passed in to other React.createElement calls as their third argument.
+
+React.createElement(
+  type,
+  [props],
+  [...children]
+)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

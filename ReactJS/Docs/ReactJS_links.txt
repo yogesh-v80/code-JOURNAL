@@ -1,0 +1,53 @@
+Warning: ReactDOM.render is no longer supported in React 18.
+ Use createRoot instead. 
+ Until you switch to the new API, your app will behave as if it's running React 17.
+ Learn more: https://reactjs.org/link/switch-to-createroot react-dom.development.js:73:32
+
+
+
+
+
+
+
+############ links ##############
+
+https://egghead.io/courses/the-beginner-s-guide-to-react
+
+https://reactresources.com/
+
+
+https://create-react-app.dev/
+
+https://www.taniarascia.com/getting-started-with-react/
+
+https://reactfordesigners.com/
+
+https://reactjs.org/docs/react-api.html
+
+
+
+
+
+################ important topic #######
+ 
+https://refine.dev/blog/common-usestate-mistakes-and-how-to-avoid/
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining
+
+https://react.dev/learn/passing-props-to-a-component#step-2-read-props-inside-the-child-component
+
+https://robinpokorny.com/blog/index-as-a-key-is-an-anti-pattern/
+
+https://beta.reactjs.org/learn/sharing-state-between-components
+
+https://beta.reactjs.org/learn/preserving-and-resetting-state
+
+https://reactjs.org/docs/state-and-lifecycle.html
+
+https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/
+
+
+
+
+
+

@@ -1,0 +1,195 @@
+react make it easier to build web apps
+
+previously jquery was popular
+
+javascript is used to create ReactJS
+
+React can be used to develop mobile component android  and ios, VR applica..
+
+when we install Node.js then npm comes bundled with it.
+
+npm is all about code sharing and reuse.
+
+
+Css grid 
+
+bootstrap css framwork, quick website building, grid in Bootstrap
+ is important feature 
+ 
+so we can define layout
+
+
+
+
+how to use map() method ?
+
+List - represented in array in Javascript,  most common type it have is 
+       object
+
+with map() we can extract the data which user care about.
+
+map() work on Array only.
+we need to use array type list
+
+
+Render a simple list component (transform lists of elements)
+
+we can transform any list of item in a collection of react component
+
+
+react do automatic optimization updates in your UI.
+
+diffing algorithm used by react whenever we make changes in dom tree or 
+add a new component.
+and the process of updating ( vir to real dom ) is called recoliniation in react.
+
+when we add new component at the last the efficiency decreases. because some
+mutation takes place by diffing.
+
+Here list identifiers is used to identify those component to make process
+more efficiencty.
+
+map(), filter(), sort()   function used.
+
+
+Keys in list -
+key is a property (prop)
+
+Key used to indetify (unique id) which items is added, changed or removed.
+or to distinguished between list itmes. 
+
+key specify how to treat a element when updates happens (new list item added)
+
+item index is not recommended bcs when updates happens list loses its order
+(position changes and it's content lost or internal state won't be preserved
+of list items).
+perfromance decreases and UI glitch occures that's why.
+
+if we use random function to generate key values or id's then it will be 
+unique but when we re-render internal state won't be preserved of list itmes.
+
+
+## Controlled component -
+
+works as a Source of truth for a component
+
+# declaravtive API
+A declarative API is an application programming interface that allows developers 
+to define what they want to accomplish, rather than how to accomplish it.
+In a declarative API, the developer specifies the desired outcome or end state,
+ and the API takes care of the underlying implementation details. 
+This approach contrasts with an imperative API, 
+where developers specify the exact steps required 
+to achieve the desired outcome.
+
+
+
+provide more control over the forms
+
+<form> <fieldset> </fieldset> </form>
+
+onSubmit, onChange, button type submit, 
+button disabled, value, e.target.value
+e.preventDefault();
+
+value props is used to perform state delegation.
+In React, state delegation refers to the practice of
+ passing state data and state management functions 
+ down to child components in a component hierarchy. 
+
+
+
+CONTEXT API
+
+Global State ( data or state which is used by most of the component but not
+essentially by every component )
+
+props drilling problem is solved with the use of Context API
+
+
+
+
+
+
+
+#######  extra ###
+
+React is a declarative JavaScript library for building user interfaces. 
+While React does include some imperative APIs for interacting with 
+the DOM (such as the ReactDOM library for rendering components to the DOM), 
+the core React APIs are primarily declarative.
+
+In React, developers define the desired UI state using 
+a declarative syntax called JSX, which describes 
+what the UI should look like based on the current
+ state of the application. 
+Developers do not need to specify how to update the 
+UI in response to changes in state;
+ React takes care of that automatically.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

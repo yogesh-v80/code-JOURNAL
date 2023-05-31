@@ -1,0 +1,241 @@
+useState hook,
+ managing useState hook
+
+spread operator,
+ updating object
+
+
+useEffect( callback, [])
+
+- use to perform side effect
+- useEffect can be used to free up memory, unmounting 
+  and clean up resource.
+
+-useEffect accept a callback function and an [] dependency array.
+
+
+
+- pure function 
+A pure function is a function that always produces the same 
+output for a given input, and has no side effects. 
+In other words, a pure function has no dependencies 
+on external state or mutable data, and does not 
+ modify any variables outside of its local scope. 
+ Pure functions are deterministic and predictable, 
+and their outputs can be cached or memoized for increased performance.
+
+Pure functions are deterministic and predictable, 
+and their outputs can be cached or memoized for increased performance.
+
+Pure functions are preferred in functional programming, 
+since they are easier to test, reason about, and parallelize, 
+and can help prevent bugs and improve code quality.
+
+- impure function - perform side effects ( invoke -> fetch, console.log, browser geolocation )
+an impure function is a function that can produce different output for the same input,
+ or has side effects such as modifying variables outside of its local scope, 
+ performing I/O operations, or accessing shared resources.
+  Impure functions can be non-deterministic and harder to reason about,
+  since their behavior may depend on external factors.
+
+Impure functions are sometimes necessary for performing I/O operations,
+ interacting with external systems, or modifying mutable data structures.
+
+
+
+
+- side effect is something outside to the function
+
+
+
+
+useEffect( function(){ console.log("hey")}, [])
+
+or 
+
+useEffect(() => console.log("es6"), [])
+
+
+
+
+
+ 
+ 
+
+date: 30 march 2023
+
+Rules of Hook
+
+- 
+- only calls hooks at the top level of react component function or before the return statement
+- hooks must be part of (call from ) the react component function  
+  ( not outside of component allowed) or we should not be calling hooks from regular javascript function
+- hooks can't be part or in scope of conditionals, loop or javascript statement
+- it allowed or valid to call mutliple state and useEffect hooks
+- make multiple hook calls in the same sequence
+
+
+
+fetch()  or fetch api   or an interface in js -
+
+- Fetch API use to get some JSON data from a 
+ third-party website in plain JavaScript.
+- In React, fetching data from a third-party API 
+  is considered a side-effect.
+  so we use useEffect hook for this.
+  
+-fetch just a way of communicating or a Browser Api 
+  or it's a way of access browser functionality which is outside the javascript.
+     When JavaScript uses the fetch function it is delegating duties 
+  to an external API so that it can continue its process.  
+
+-The Fetch API provides a JavaScript interface for 
+ accessing and manipulating parts of the protocol, 
+ such as requests and responses. It also provides 
+ a global fetch() method that provides an easy,
+ logical way to fetch resources asynchronously 
+ across the network.
+  
+-fetch is used to invoke or 
+ to make a server request and retrive a json data from it.
+
+-response from fetching third-party data might fail, 
+ or be delayed
+
+
+fetch API  - it's have a set of functionality
+
+rensponse.json()  used to convert in json format
+
+
+
+
+
+what is APi ?
+
+- it's a way to talk or communicate differenct things or talk to the server
+- an application talk to a server an API to get data.
+- and an program or applciation is nothing without data.
+
+- ensuring type safety ... means when we requesting a photo we actually do get a photo.
+
+
+
+- desing process include multiple iteration 
+
+- integrity is important 
+
+- first is about documenting or specification 
+
+- then building actual API or code part.
+
+
+- Api must be consistent and make sense across whole stack
+  so we must dicuss with frontend middleware and backend people.
+  
+-  keep it simple 
+
+
+
+
+# useReducer hook    ( a superpower useState )
+
+e.g-     const [state, dispactch] = useReducer(reducer, iniState)
+
+      there reduecer is a function and have two parameter state, action 
+      
+      and action parameter is set through the dispatch function 
+      and state is updated with use of state parameter.
+      it better uderstand through the example and practice.
+
+- used for complex state 
+- it have initial value and a reducer function.
+- best used on object and array or complex data
+- how (based on condition) the state is controled 
+
+- action.type === "ksjdlfk",  
+- dispatch({type: sdlfjsdj }) 
+
+- to control large state holding object.
+
+- comparitively useState is become hard to maintain 
+  as the state gets more complex
+  
+- negative point of useReducer it required more prep work 
+  or intial set up required to work with useReducer
+
+
+
+
+
+# useRef()   hook 
+
+- useRef() returns the reference
+  and later this reference is assigned to the 
+  ref attribute of tag
+
+-  used to access the underlying DOM 
+- current is property of useRef
+- focus() is a function to focus on 
+  an element like input type text.
+- it return Object data type.
+
+- we can work with the specific propeties 
+  of DOM node with the use of useRef
+
+
+
+
+
+
+
+
+
+
+
+######## extra #
+
+Object.assign() merges the state and newState objects 
+together into a new object, and returns that object. 
+The setState function then updates the state variable
+ to reference the new merged object.
+
+Note that Object.assign() returns a new object rather
+ than modifying the input objects directly. This is a 
+ key feature of a pure function - it does not modify 
+ the input arguments or have any side effects.
+
+
+let state = {};
+
+function setState(newState) {
+  state = Object.assign({}, state, newState);
+}
+
+
+single threaded execution  ( syncronously )
+next step cannot start before previous execution finished
+
+mutlithreaded execution   ( asyncronously )
+
+
+
+Object.keys()  
+
+The Object.keys() method is used to return an 
+array of the names of the enumerable properties 
+of an object. Here's an example code snippet:
+
+const myObj = {a: 1, b: 2, c: 3};
+const keys = Object.keys(myObj);
+console.log(keys); // output: ["a", "b", "c"]
+
+
+
+
+
+
+
+
+
+

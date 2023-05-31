@@ -1,0 +1,184 @@
+
+#JSX, Component, Element
+
+how react uses JSX
+
+component vs Element
+
+React Declarative model
+
+JSX - is javascript syntax extention which look like html tag but actually a object.
+
+Element - the JSX is transpiled to the plain object describing a component instance
+      or DOM NODE and its desired properties. This plain object is 
+      what React defines as an Element.
+      
+      An element is just a way of representation of final HTML output
+      as a plain object. 
+      Consists primarly two properties ( type and props ).
+     
+     Note: these objects are easy to traverse and so simpler than the 
+            actual DOM elements.
+
+Virtual DOM - A javascript alternative representation of the real DOM.
+
+
+
+#PERFORMANCE 
+
+- certain design patterns and well established approches
+
+Thinking about the performance of application can make a big difference
+between gaining a user or losing a user. and also is it fast enough?
+
+we get it done by incremental changes. Small changes matters.
+you won't notice it right away.
+
+
+
+memoization ?
+
+useMemo(callback, []) 
+
+it's hook to avoid repeated operations 
+and cashed the result
+      
+      
+      
+#Component compositon with children
+
+containment - where children is not known ahead of time.
+
+specialization   (check it later )
+
+
+
+## Manipulating children dynamically in JSX
+
+- import * as React from 'react';
+- React.cloneElement(element, [props])   
+- React.Children.map(children, callback)
+
+- to manipulate render output dynamically
+
+
+
+
+#spread Attributes 
+
+spread operator  ( ... )
+
+- cloning and merging operation 
+  on object, array, Strings
+
+
+
+3 april 2023
+
+
+## Cross cutting concern (use of HOC )-
+
+- Cross cutting concern - that is not related to the business logic but used
+  repeatedly throughout the application. 
+- for e.g. the subcription of users, logging, permission role, 
+  handling errors... etc.
+  
+HOC ( higher order component ) 
+
+- HOC adds features to a component. In other words, it enhances it.
+
+- we should not mutate the original component
+
+const HOC = (WrappedComponent) => {
+  // Don't do this and mutate the original component
+  WrappedComponent = () => {
+    
+  }; 
+ …
+}
+
+
+-Maximize composability
+
+So far, you have learned that the primary signature of a HOC is a function that accepts a React component and returns a new component.
+
+Sometimes, HOCs can accept additional arguments that act as extra configuration determining the type of enhancement the component receives.
+
+const EnhancedComponent = HOC(WrappedComponent, config)
+
+
+
+## Render props 
+
+- takes function that returns react elements and  call them inside their render logic.
+
+
+
+
+
+## Testing 
+
+#importance of testing
+
+- to ensure things working as espected
+
+- to discover BUGS
+
+- important for gauranteeing the quality of the sof. you develop (ensure software quality )
+
+- save time and money
+
+
+- file have .test.js extension
+
+- npm run test        (run test)
+
+
+- jest test runner,   react-testing-library
+
+- import "@testing-library
+
+- import "@testing-library/jest-dom
+
+
+
+continuous integration testing
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
