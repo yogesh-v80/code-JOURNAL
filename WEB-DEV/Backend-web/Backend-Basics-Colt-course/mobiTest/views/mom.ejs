@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,300,400,700" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="app.css">
+
+    <title>Museum of Candy</title>
+</head>
+
+<body>
+  <nav id="mainNavbar" class="navbar navbar-dark navbar-expand-md py-0 fixed-top">
+    <a href="#index" class="navbar-brand">CANDY</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navLinks" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse bg-primary" id="navLinks">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a href="/mom" class="nav-link">MOM</a>
+            </li>
+            <li class="nav-item">
+                <a href="" class="nav-link">ABOUT</a>
+            </li>
+            <li class="nav-item">
+                <a href="" class="nav-link">TICKETS</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+    
+<!-- The HTML elements for the image and text -->
+<div class="image-container">
+  <img src="imgs/james1.jpg" alt="Image">
+  <div class="image-text">
+    <h2>James</h2>
+    <p>Space Exploration</p>
+  </div>
+</div>
+
+ <!--    <div >
+         <img class="james" src="imgs/james1.jpg" alt="image"> 
+         <h1  class="animate-on-scroll">James Webb Telescope Images</h1>
+         </img>
+     </div> -->
+
+
+
+
+     
+
+        <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ" crossorigin="anonymous"></script>
+
+
+    <script>
+       const mainNavbar = document.querySelector("#mainNavbar");
+
+function toggleNavbarClass() {
+  if (window.pageYOffset > mainNavbar.offsetHeight) {
+    mainNavbar.classList.add("scrolled");
+  } else {
+    mainNavbar.classList.remove("scrolled");
+  }
+}
+
+document.addEventListener("scroll", toggleNavbarClass);
+
+    </script>
+</body>
+
+</html>

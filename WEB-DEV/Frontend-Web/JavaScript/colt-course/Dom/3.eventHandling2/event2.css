@@ -1,0 +1,39 @@
+body{
+	background-color: gray;
+	color: white;
+	text-align: center;
+}
+/* 
+.container{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	flex-direction: column;
+	height: 70vh;
+
+} */
+
+button{
+background-color: gray;
+	color: white;
+	width: 200px;
+	height: 100px;
+}
+
+.hidden-content{
+
+	display: none;
+}
+
+.hidden-content.reveal-btn{
+	
+	display: block;
+}
+/* puzzled here */
+
+
+/* 
+.hidden-content{
+	
+	display: block;
+} */

@@ -1,0 +1,22 @@
+<%- include("partial/head") %>
+
+		<%- include("partial/navbar") %>
+<!-- there   <%=  %> this tag is used for render the output of js -->
+<!-- there   <%  %> this tag is used for js logic but not render happens -->
+
+	<h1> random number is ->  <%= num %>  </h1>
+
+	<% if(num%2==0){  %>
+
+    <h2>The number is even</h2>
+
+	<% }  else {%>
+
+		<h2> The number is odd</h2>
+	<%   } %>
+
+
+	<p>here is the alternative way to do it</p>
+	<h3>  <%= (num%2==0)? "even": "odd" %>  Number </h3>
+
+<%- include("partial/footer") %>

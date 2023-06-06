@@ -1,0 +1,176 @@
+p{
+	/*text-align: right;*/
+	text-align: justify;
+	direction: ltr;
+	/*unicode-bidi: plaintext;*/
+	font-size: larger;
+	letter-spacing: 1.2px;
+	padding: 10px;
+	/*font-family: system-ui;*/
+	font-family: monospace;
+	white-space: pre-line;
+	/*white-space: wrap;*/
+	}
+
+p::first-letter {
+  /*color: blue;*/
+  text-transform: uppercase;
+  font-size: xx-large;
+}
+
+.exciting-text::after {
+  content: " <- EXCITING!";
+  color: black;
+}
+
+p::selection{
+	background-color: red;
+}
+
+h1:hover{
+	background-color: black;
+}
+
+
+body{
+	margin: 0;
+	border: 5px solid teal;
+	height: 200vh;
+	/*background: linear-gradient(to right, red, orange, green, blue);*/
+	/*background: linear-gradient(to right, red, teal 50%, blue 85%);*/
+	/*background: linear-gradient(
+    to right,
+    red 20%,
+    orange 20% 40%,
+    yellow 40% 60%,
+    green 60% 80%,
+    blue 80%
+  );*/
+   /*background: linear-gradient( 45deg, red, blue);*/
+   /*background:linear-gradient(45deg, red 0 50%, blue 50% 100%);*/
+
+   background-image: linear-gradient(to top,#EC6599 0%,#4129AC 80%);
+
+	color: white;
+}
+
+h1{
+	text-align: center;
+	padding: 10px 0;
+	margin: 0;
+	border-bottom:1px solid lime;
+	color: white;
+	 /*text-decoration: solid underline red 2px;*/
+	letter-spacing: .1em;
+	font-size: 40px;
+	/*background-color: #1d1d1f22;*/
+	background-color: #424245;
+	font-family: cursive;
+
+	position: sticky;
+	top:-1px;
+
+}
+
+
+
+div{
+	width: 100px;
+	height: 100px;
+	background-color: salmon;
+	border: solid;
+	margin: 2px;
+	/*text-align: center;*/
+	/*display: flex;*/
+	display: inline-block;
+	text-align: center;
+}
+
+section{
+		margin: 0 40vw ;
+		display: flex;
+		width: 300px
+
+	}
+
+/*span{
+	border: 1px solid white;
+}*/
+
+section .logorithm{
+	width: 100px;
+	height: 100px;
+	background-color: purple;
+}
+
+/* Unvisited links */
+a:link {
+  color: blue;
+}
+/* Visited links */
+a:visited {
+  color: purple;
+}
+/* Hovered links */
+a:hover {
+  background: yellow;
+}
+/* Active links */
+a:active {
+  color: red;
+}
+
+/* Active paragraphs */
+p:active {
+  background: salmon;
+}
+
+
+
+button{
+	padding: 2px 1.5em;
+	border-radius: 0.7em;
+
+}
+
+@page :first {
+  margin-left: 50%;
+  margin-top: 50%;
+}
+
+p {
+  page-break-after: always;
+}
+
+li:first-child {
+    border: 2px solid orange;
+    width: 40px;
+}
+
+a::after {
+    content: ' (' attr(href) ')';
+}
+
+p::before {
+    content: '🎮 ';
+}
+
+
+h2::before {
+  content: "Para "; /* The trailing space creates separation
+                          between the added content and the
+                          rest of the content */
+
+  color: lime;
+}
+
+p>a{
+  text-decoration: none;
+  border-bottom: 3px dotted navy;
+}
+
+div{
+
+}
+
+

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Add Product</title>
+</head>
+<body>
+
+	<h1><%= farm.name%> </h1>
+	<h2>Add a Product</h2>
+	<hr>
+
+	<form method="POST" action="/farms/<%= farm._id%>/products" >
+		<label id="name"> Name</label>
+		<input type="text"  name="name" placeholder="Product name" id="name">
+		<label id="price">Price</label>
+		<input type="number"  name="price" placeholder="Product price" id="price">
+		<label id="category"> Select Category </label>
+		<select name="category" id="category">
+			<option value="fruit"> Fruit</option>
+			<option value="vegetable"> Vegetable</option>
+			<option value="dairy"> Dairy</option>
+		</select>
+
+		<button> Add Product </button>
+	</form>
+
+	<br>
+	<br>
+	<br>
+	<hr>
+
+
+	
+	<div style="text-align: center;"><a href="/farms/<%= farm._id %>" > Back to Farm</a></div>
+	<br>
+	<div style="text-align: center;"><a href="/products" > All Products</a></div>
+	
+</body>
+</html>

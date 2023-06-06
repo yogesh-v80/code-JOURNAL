@@ -1,0 +1,32 @@
+<script>
+
+	let production = (work) => {
+		return new Promise((resolve, reject) => {
+			// return resolve(work())   // resolve is implicitly returned always when called (by intution)
+			// we can pass any kind of data as a parameter in the resolve()
+		    resolve(work())
+		} )
+	}
+	
+	production( () => {
+		console.log("resolved")
+	})
+// there Promise object will be returned with the value of resolve()
+// and because of this .then() will be executed and there we can pass
+// the callback (a task which want to execute)
+	.then((res) => {
+		console.log(res)
+		// console.log(res())
+		 production(() => {
+			return 'heyaa'
+			// return console.log('slkd')
+		})
+	})
+
+	.then((res) => {
+		console.log(res)
+		console.log('puzz ')
+
+	})
+
+</script>

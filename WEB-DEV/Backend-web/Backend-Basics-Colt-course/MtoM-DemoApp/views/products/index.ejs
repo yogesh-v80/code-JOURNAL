@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title><%= catTrimmed ? catTrimmed.toUpperCase() : "ALL"%> Products</title>
+</head>
+<body>
+
+	  <h1> Products!</h1>
+
+    <% if (catTrimmed) { %>
+	<h3> <%= catTrimmed.toUpperCase() %> Products </h3>
+	<% } %>
+
+	
+
+	<form action="/products">
+		<label for="category">  <b>Filter:</b></label>
+		<select name="category" id="category"  >
+			<option value="all"> ALL</option>
+			
+		<% for(let category of categories) {  %>
+			<h1> <%= category %> </h1>
+			  <option value=" <%= category %> " <%= category === catTrimmed ? "selected": ""  %>  >  <%= category.toUpperCase() %>  </option>
+			<% } %>
+
+		</select>
+			<button>SEARCH &#128270 </button>
+
+	</form>
+
+	<hr/>
+
+	<ol>
+		
+		<% for(let product of products){ %>
+			<li>  
+			<a href="/products/ <%= product._id %>"> <%= product.name %> </a>
+			</li>
+
+		<% } %>
+	</ol>
+
+
+	 <% if ( products.length === 0 && catTrimmed === "all") { %>
+				<p>  <b>Nothing in Stock </b> right now :(  </p>
+				<p><b>(Maal lut gaya)</b></p>
+				<h4>Come Later </h4>
+	<% } else if(products.length === 0){%>
+		<p> <%= catTrimmed.toUpperCase() %> <b>Not in Stock</b> right now :(  </p>
+				<h4>Come Later </h4>
+	<% }%>
+	<hr/>
+
+
+
+	<a href="/products/new" title="Add new product" > Add New Product</a>
+
+	<h3> Click on the product to update</h3>
+
+	<% if (catTrimmed && catTrimmed !== "all" ) { %>
+	<a href="/products" title="All Products">  All Products </a>
+	<% } %>
+
+</body>
+</html>

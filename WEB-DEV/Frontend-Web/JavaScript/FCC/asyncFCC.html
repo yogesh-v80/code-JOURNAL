@@ -1,0 +1,35 @@
+<script>
+	
+	let chef = () =>{
+		return new Promise((resolve, reject) => {
+
+			setTimeout(()=>{
+				resolve(console.log("doing the dishes"))
+				// reject(console.log("doing the dishes"))
+			}, 3000)
+			
+		})
+	}
+
+
+
+	async function kitchen(){
+		console.log("A")
+		console.log("B")
+		console.log("C")
+		await chef()
+		console.log(" D - where was you chef")
+		console.log("E - where was you D")
+	}
+
+
+	kitchen()
+
+
+	console.log("it will print after chef() invoked")
+	console.log("i can't wait ... i will run anyway")
+	console.log("because js run codes top to bottom synchronously")
+
+	
+</script>
+

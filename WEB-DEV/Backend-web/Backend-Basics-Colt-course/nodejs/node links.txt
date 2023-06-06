@@ -1,0 +1,12 @@
+https://www.golinuxcloud.com/install-nodejs-ubuntu-from-tar-xz/
+
+https://stackoverflow.com/questions/63312642/how-to-install-node-tar-xz-file-in-linux
+
+
+
+
+
+
+
+
+

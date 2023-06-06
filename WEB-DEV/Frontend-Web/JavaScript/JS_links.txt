@@ -1,0 +1,30 @@
+https://wesbos.com/
+
+https://scrimba.com/learn/interviewchallenges
+
+https://www.taniarascia.com/es6-syntax-and-feature-overview/
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Language_Overview
+
+https://javascript.info/
+
+https://stackoverflow.com/questions/2846283/what-are-the-rules-for-javascripts-automatic-semicolon-insertion-asi
+
+
+
+
+################### CSS ###########
+
+https://www.30secondsofcode.org/collections/p/1
+
+https://www.30secondsofcode.org/css/p/1
+
+https://www.30secondsofcode.org/js/p/1
+
+
+copy click project
+https://webdesign.tutsplus.com/tutorials/create-a-click-to-copy-utility-with-javascript--cms-93386
+
+
+a mini responsive frontend
+https://webdesign.tutsplus.com/tutorials/how-to-build-an-off-canvas-menu-with-css-and-a-touch-of-javascript--cms-30354

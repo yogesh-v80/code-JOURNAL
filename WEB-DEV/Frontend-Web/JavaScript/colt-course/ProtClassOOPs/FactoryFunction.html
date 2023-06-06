@@ -1,0 +1,60 @@
+<!-- ///// Factory Function  -->
+
+
+<script>
+	
+	function makergb(r,g,b){
+		const color = {}
+		color.r = r;
+		color.g = g;
+		color.b = b;
+/*
+		color.rgb =  () => {
+			// console.log(this)
+			// console.log(this.r);
+			
+			const {r,g,b} = this ; //deconstructing
+			return `rgb(${r}, ${g}, ${b})`;
+		};
+	*/
+//just above arrow function won't give desire result
+//bcs this don't work with arrow function
+
+
+
+		color.rgb =  function () {
+			// console.log(this)
+			// console.log(this.r);
+			
+			const {r,g,b} = this ; //deconstructing
+			return `rgb(${r}, ${g}, ${b})`;
+		};
+
+
+
+		color.hex = function() {
+			const {r, g, b} = this;
+			return (
+				'#' + ((1<<24) + (r << 16) + (g << 8) + b).toString(16).slice(1)
+				);
+		};
+
+		// function hex(r,g,b){
+
+		// }
+		
+		return color;
+
+	}
+
+
+	let first = makergb(122,22,34)
+	let second = makergb(0,0,34)
+	// first.rgb()    // 'rgb(122, 22, 34)'
+	// first.hex()    // '#7a1622'
+	
+    first.hex === second.hex    //false 
+    // bcs each time we creating a new instances
+
+
+</script>
