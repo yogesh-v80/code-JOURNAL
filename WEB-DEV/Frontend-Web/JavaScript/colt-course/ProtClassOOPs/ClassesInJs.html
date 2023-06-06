@@ -1,0 +1,60 @@
+<script>
+	
+	class Color{
+	//we use first letter capital for the classname
+	//
+	///constructor function
+		constructor(r,g,b, name){
+			this.r = r;
+			this.g = g;
+			this.b = b;
+			this.name = name;
+		  	// this.nameColor = name;  //this is also valid
+		  	// console.log(this);  
+		  	// console.log(r,g,b); 
+		  	this.addNewInstance()
+		}
+
+		innerRbg(){
+			const { r, g, b} = this;
+			return `${r}, ${g}, ${b}`;
+
+		}
+
+
+		rgb() {	
+		  	// const {r,g,b} = this ;  
+		  	// return `rgb(${r}, ${g}, ${b})`;
+		  	return `rgb(${this.innerRbg()})`;
+		};
+
+
+	    hex() {
+		  	const {r, g, b} = this;   
+		  	return (
+		  		'#' + ((1<<24) + (r << 16) + (g << 8) + b).toString(16).slice(1)
+	  	    );
+	    };
+
+	    rgba(a = 1.0){
+	    	return `rgba(${this.innerRbg()}, ${a})`
+	    }
+			//these rgb, hex function will be part of Prototype object when a 
+			//new variable is created with new Color()
+		
+		addNewInstance(){
+
+			this.h = 2;
+			this.y = 3;
+		}
+
+
+    }
+		
+	const black = new Color(0,0,0, "black")
+	const white = new Color(255,255,255, 'white')
+
+//now there constructor is set to the Class in Prototype Object
+
+
+</script>

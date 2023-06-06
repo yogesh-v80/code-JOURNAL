@@ -1,0 +1,129 @@
+<script>
+	
+
+	//the Color constructor function 
+	//Note: it returns this implicitly if we don't return anything explicitly
+/*  function Color(r,g,b){
+  	this.r = r;
+  	this.g = g;
+  	this.b = b;
+  	console.log(this);  
+
+  }*/
+
+
+  //Color(2,3,4)
+  //new Color(2,3,4)
+  //right now if we call the Color function the this
+  //inside the function is refering to the global scope (widow object)
+  //window.r
+  //window.b
+  //window.g
+  //
+  //
+/*  
+
+   function Color(r,g,b){
+   	let myobj = {};
+   	//there this still not refers to the myobh 
+   	//bcs the lifetime of myobj object is confined to the Color constructor
+   	//or myobj won't exist after the Constructor execution 
+  	this.r = r;
+  	this.g = g;
+  	this.b = b;
+  	console.log(this);  
+
+  	return myobj;   // there myobj won't have any type ... it will return undefined
+
+  }
+
+*/
+
+
+/*
+   function Color(r,g,b){
+
+  	this.r = r;
+  	this.g = g;
+  	this.b = b;
+  	console.log(this);  
+
+  	this.rgb =  function () {	
+			const {r,g,b} = this ; //deconstructing
+			return `rgb(${r}, ${g}, ${b})`;
+		};
+
+  }
+
+
+  new Color(3,2,4)*/
+
+  //note: there rgb is still part of the object like r, g, b
+  //      it is not in the Prototype object
+  //
+  //but if we do
+  //
+  //
+  //
+   function Color(r,g,b){
+
+  	this.r = r;
+  	this.g = g;
+  	this.b = b;
+  	console.log(this);  
+  }
+
+    // class_name.prototype.method_name = function(argument){
+    // 	// body... 
+    // };
+    // 
+    // 
+       Color.prototype.rgb =  function () {	
+			const {r,g,b} = this ; //deconstructing
+			return `rgb(${r}, ${g}, ${b})`;
+		};
+
+
+	   Color.prototype.hex = function() {
+			const {r, g, b} = this;
+			return (
+				'#' + ((1<<24) + (r << 16) + (g << 8) + b).toString(16).slice(1)
+				);
+		};
+
+
+		Color.prototype.rgba =  function (a = 1.0) {	
+			const {r,g,b} = this ; //deconstructing
+			return `rgb(${r}, ${g}, ${b}), ${a}`;
+		};
+
+  const color1 = new Color(3,2,4)
+  const color2 = new Color(0,0,0)
+
+
+  //new allocate memory for object 
+  //and initialize color1  and color2 
+  //with default initialization with instance of r,g,b 
+  //and setting rgb, rgba, hex function as a Prototype object properties
+  //which we can access by the . (dot operator)
+  
+
+  //now rgb, hex function in Prototype object
+ 
+
+ color1.hex === color2.hex    //true  
+ //bcs color1 and color2 is refering to the same function 
+ //bcs both created with same constructor (Color())
+
+
+
+// we can do all these in better way with the use of classes
+
+
+
+
+
+</script>
+
+
+

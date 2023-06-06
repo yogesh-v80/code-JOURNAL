@@ -1,0 +1,26 @@
+<script>
+	// console.log('ello')
+	// setInterval(()=> {console.log('bolo')}, 2000)
+	//it will log after 2 second or 2000ms
+	// console.log('jao')
+	
+	
+	//CallBack - whenn we nest a funtion inside another function as a argumnet
+	
+	
+	
+	function one(call_back)
+	{
+	
+		// call_back()
+		console.log('step-1')
+		call_back()
+	}
+	
+	function two()
+	{
+		console.log('step-2')
+	}
+	
+	one(two)
+</script>

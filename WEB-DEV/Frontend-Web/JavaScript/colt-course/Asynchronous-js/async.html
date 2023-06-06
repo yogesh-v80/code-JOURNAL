@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>async await</title>
+</head>
+<body>
+
+	<h1>async  await</h1>
+
+
+	<script>
+		
+		// async and await is keywords
+
+		//async always return Promises
+		// and the Promise is automatically returned by async function 
+		// or it returns Promise behind the scene
+		// if async function returns value, the Promise will be resolved or fulfilled with that value
+		// if async function throws exception the  promise will be rejected
+
+/*
+		const noGreet = async ()=>{
+			//still it will be resolved/fulfilled 
+			//bcs async automatically return Promise
+			//and there is no value will be returned (or it will return undefined)
+		}
+
+
+		const greet = async ()=>{
+			return "hey"
+		}
+		//it will be fulfilled/resolved with value "hey"
+
+		greet().then((data)=>{
+			console.log("promise resolved with:", data)
+			//there data will be returned value from green
+		})
+*/
+
+
+/*
+		//when async got rejection
+
+		const rej = async ()=> {
+			slsdflk   //it will return rejected Promise due to this invalid syntax
+			return "it won't returned"  //it won't execute
+		}
+
+		const rejwiththrow = async ()=> {
+			// throw new Error(" it's error")  
+			throw " it's error"  // or we can say reject("it's error")
+			return "won't execute"
+		}
+
+		//if we throw error or we have error it will return Promise with rejected state automatically
+
+		//there we can apply .then().catch() on these async function 
+
+*/
+
+/*
+
+		const login = async (username, password) => {
+			if(!username || !password ) throw "missing credentials"
+			if(password === 'pass123@') return "Valid password"
+				throw "invalid password"
+		}
+
+
+
+
+		login("name")
+			.then((data) => {
+				console.log("resolved")
+				console.log(data)
+			})
+			.catch((errmsg)=> {
+				console.log('rejected')
+				console.log(errmsg)
+			})
+
+// Puz: it will execute in last
+		login("name", "i don't know")
+			.then((data) => {
+				console.log("resolved")
+				console.log(data)
+			})
+			.catch((errmsg)=> {
+				console.log('rejected')
+				console.log(errmsg)
+			})
+
+// Puzz: it will be executed first
+		login("name", 'pass123@')
+			.then((data) => {
+				console.log("resolved")
+				console.log(data)
+			})
+			.catch((errmsg)=> {
+				console.log('rejected')
+				console.log(errmsg)
+			})
+
+		*/
+
+
+	//await
+
+	//only works/use with async function 
+	//pause the execution of function waiting for Promise to be resolved
+
+	const delayColorChange = (color, delay) => {
+		return new Promise((resolve, reject) => {
+
+			if( delay > 900){
+				setTimeout( () => {
+					document.body.style.backgroundColor = color;
+					resolve();
+					console.log("resolved")
+				}, delay)
+			} else{
+				reject('delay is lower than 900ms');
+				console.log("rejected")
+			}
+		})
+	}
+
+
+	console.log("rainbow starts from here")
+
+		async function rainbow(){
+			await delayColorChange('red', 1000)
+			console.log("it will print after just above code")
+			await delayColorChange('orange', 1000) //this line only run after the previous is finished and same for others
+			await delayColorChange('grEen', 1000)
+			await delayColorChange('blue', 1000)
+			await delayColorChange('iamnotcolor', 1000) //it will resolve but no color will be shown
+			await delayColorChange('magenta', 1000)
+			await delayColorChange('indigo', 900)  //it will be rejected
+			await delayColorChange('teal', 1000)
+			await delayColorChange('pink', 1000)
+			
+			return "all resolved"
+		}
+
+		// rainbow().then(() => console.log("end of rainbow"))
+
+		//or we can write 
+
+		// async function printRanbow(){
+		// 	await rainbow();
+		// 	console.log("end of rainbow")
+		// }
+
+		// printRanbow();
+
+		// console.log("i won't execute")  //  it won't execute because we didn't handeled the error or rejection
+
+		//handling error in async function 
+
+		async function printRanbow(){
+			try{
+
+			await rainbow();
+			console.log("end of rainbow")
+			}
+			catch(e){
+				console.log(e)
+			}
+		}
+
+		printRanbow();
+
+		console.log("still not executing ...puzz  ")   //puz
+
+
+
+
+
+	</script>
+	
+</body>
+</html>

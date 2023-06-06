@@ -1,0 +1,32 @@
+<%- include("partial/head") %>
+
+		<%- include("partial/navbar") %>
+
+
+	<style>
+	img{
+		width: 250px;
+		height: 150px;
+	}
+	</style>
+
+
+
+
+	<h1> Browsing the name:  <%= name %>  subreddit</h1>
+	<p> <i> Description:</i> <%= description %> </p>
+	<p> Total subscribers: <b> <%= subscribers %></b> </p>
+	
+	<hr/>
+
+	<% for (let post of posts) { %>
+		<article>
+			<p> <%= post.title %> - <i><b> <%= post.author %></b></i> </p>
+
+		<%	if (post.img) { %>
+				<img src="<%= post.img %>" alt="image" >
+		   <%	} %>
+		</article>
+	<% } %>
+
+<%- include("partial/footer") %>

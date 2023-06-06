@@ -1,0 +1,83 @@
+<script>
+ 
+	// class Cat{
+	// 	constructor(name,age){
+	// 		this.name = name;
+	// 		this.age = age;
+	// 	}
+
+	// 	eat(){
+	// 		return `${this.name} is eating`
+	// 	}
+
+	// 	meow(){
+	// 		return `meow...`
+	// 	}
+		
+	// }
+
+
+	// class Dog{
+	// 	constructor(name,age){
+	// 		this.name = name;
+	// 		this.age = age;
+	// 	}
+
+	// 	eat(){
+	// 		return `${this.name} is eating`
+	// 	}
+
+	// 	bark(){
+	// 		return `wooff...`
+	// 	}
+		
+	// }
+
+		  //////////////////////
+		  // super  // extend //
+		  //////////////////////
+  
+
+	class Pet{
+		constructor(name, age){
+		console.log("in Pet constructor")
+			this.name = name;
+			this.age = age;
+		}
+		eat(){
+			return `${this.name} is eating`
+		}
+	}
+
+	class Cat extends Pet{
+
+		// if we want to creat constructor we must use super keyword
+		// because Pet is super class of Cat
+		// or Cat is subclass of Pet
+		constructor( name, age, liveLeft = 9){
+		console.log("in Cat constructor")
+		super(name,age)   //referencing to the Pet constructor
+		this.liveLeft = liveLeft;
+		}
+
+		meow(){
+			return "meow";
+		}
+	}
+
+	class Dog extends Pet{
+		bark(){
+			return "Wooff";
+		}
+
+		eat(){
+			return 	`${this.name} eating eating`
+			//this will override the Pet class eat() function
+		}
+	}
+
+
+
+
+
+</script>

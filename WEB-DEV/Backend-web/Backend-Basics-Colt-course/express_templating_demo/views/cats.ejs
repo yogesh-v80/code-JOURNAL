@@ -1,0 +1,16 @@
+<%- include("partial/head") %>
+
+		<%- include("partial/navbar") %>
+		
+	<h1> All cats here</h1>
+
+	<p> <%= allCats  %> </p>
+
+	<ul>
+		<%for (var i = allCats.length - 1; i >= 0; i--) { %>
+			<li> <%= allCats[i] %></li>
+		<% } %>
+	</ul>
+
+	
+<%- include("partial/footer") %>

@@ -1,0 +1,27 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+//////////
+
+
+body{
+	background-image: linear-gradient(to bottom right, grey, lightsteelblue 1%,   black);
+	height: 100vh;
+	/* font-family: "Gill Sans", sans-serif; */
+	font-family: Roboto;
+}
+
+
+///////////
+
+background-image: linear-gradient(to top left, darkgrey 20%,  lightsteelblue);

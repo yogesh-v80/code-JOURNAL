@@ -1,0 +1,94 @@
+section{
+	background-color: teal;
+	border: 5px solid black;
+	width: 90%;
+	/* height: 500px; */
+	margin: 0 auto;
+	display: flex;  
+	flex-direction: row;  
+/* row is default direction (left to right) */
+	/* flex-direction: row-reverse;  */
+	/* dir right to left */
+	/* flex-direction: column; */
+	/* top to bottom */
+	/* flex-direction: column-reverse; */
+	/* bottom to top */
+
+/* justify-content */
+	/* organise content along the main axis (flex-direction) */
+	/* justify-content: flex-start; */
+	/* justify-content: flex-end; */
+	justify-content: center;
+	/* justify-content: space-around; */
+	/* justify-content: space-between; */
+	/* justify-content: space-evenly; */
+
+/* flex-wrap */
+	/* when main axis don't have enough space for content  */
+	/* then it wrap along the cross-axis when wrap is turned on */
+
+	flex-wrap: wrap;
+	/* cross-axis dir is left to right */
+	/* flex-wrap: wrap-reverse; */
+	/* cross-axis dir is right to left */
+	/* flex-wrap: nowrap; */
+
+/* align-items */
+	/* arrange items or content along the cross axis */
+	/* align-items: center; */
+	/* centered along the height of content (not fonts) */
+	/* align-items: flex-end; */
+	/* align-items: flex-start; */
+	/* align-items: baseline; */
+	/* arranged along the base or bottom of font */
+
+
+/* align-content */
+	/* it only works with wrap and wrap-reverse */
+	/* controls the spaces between content in the direction of cross-axis*/
+	/* align-content: flex-start; */
+	/* align-content: center; */
+
+
+}
+
+
+/* align-self */
+	/* works on a single content */
+	/* arrange one thing at a time in flexbox */
+
+	/* div:nth-of-type(3){ */
+		/* align-self: center; */
+		/* align along the cross- axis
+	} */
+
+section div{
+	width: 70px;
+	height: 70px;
+	text-align: center;
+	font-size: 2.5em;
+	flex-basis: 100px;
+	/* fbasis work along the main axis */
+	flex-grow: 1;
+	/* max-width: 200px */
+	/* flex-flow i think it is shorthand for flex properties */
+	
+
+}
+
+
+/* div:nth-of-type(1){
+	flex-grow: 1;
+	flex-shrink: 3;
+ }  */
+	/* flex-grow takes unitless value */
+	/* it works in proportion  */
+/* 
+
+
+div:nth-of-type(5){
+	flex-grow: 2;
+	flex-shrink: 0;
+} */
+	/* flex-grow takes unitless value
+	it works in proportion  */
