@@ -7,15 +7,12 @@ public class Fibonacci{
 
 		int a = 0;
 		int b = 1;
-			int c;
+		int c;
 
-		System.out.print(" Series is : " + a + " " + b + " ");
-		
-		for(int i = 1; i < N; i++)
+		for(int i = 1; i <= N; i++)
 		{
 			c = a + b;
-			System.out.print( c + " ");
-
+			System.out.print( a + " ");
 			a = b;
 			b = c;
 		}
